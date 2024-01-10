@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Consulting Survey Form</h1>
+    <p id="description">Please insert all the required information.</p>
+    
+    <form id="survey-form">
+      <fieldset>
+        <legend>Tell us about yourself</legend>
+        <label id="name-label" for="name">Name <input id="name" type="text" required placeholder="Insert your name">
+        </label>
+        <label id="email-label" for="email">Email <input id="email" type="email" required placeholder="Insert your email">
+        </label>
+        <label id="number-label" for="number">Phone <input id="number" type="number" placeholder="Insert a valid cellphone number" min=111111111 max=999999999>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Biological Sex</legend>
+        <label for="male"><input id="male" value=1 type="radio" name="sex" class="inline" checked /> Male</label>
+        <label for="female"><input id="female" value=2 type="radio" name="sex" class="inline" checked /> Female</label>
+      </fieldset>
+      <fieldset>
+        <legend>Which of our services are you interested in?</legend>
+        <div id="column">
+          <div id="part">
+            <label for="website-design"><input id="website-design" value=0 type="checkbox" name="service-type" class="inline" checked /> Website Development</label>
+          </div>
+          <div id="part">
+            <label for="log-design"><input id="logo-design" value=1 type="checkbox" name="service-type" class="inline" /> Logo Design</label>
+          </div>
+          <div id="part">
+            <label for="identity-design"><input id="identity-design" value=2 type="checkbox" name="service-type" class="inline" /> Identity Design</label>
+          </div>
+          <div id="part">
+            <label for="digital-marketing"><input id="digital-marketing" value=3 type="checkbox" name="service-type" class="inline" /> Digital Marketing</label>
+          </div>
+        <div>
+      </fieldset>
+      <fieldset>
+        <label for="bio">Please explain your idea:
+          <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I would like a logo that shows..."></textarea>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>How did you hear about us?</legend>
+        <select id="dropdown">
+          <option value="">(select an option)</option>
+          <option value="1">Direct Mail</option>
+          <option value="2">Print Advertising</option>
+          <option value="3">Online Advertising</option>
+          <option value="4">Sales Call</option>
+          <option value="5">Referral</option>
+          <option value="6">Other</option>
+        </select>
+      </fieldset>
+       <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
